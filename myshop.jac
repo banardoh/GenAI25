@@ -1,4 +1,4 @@
-"""Shop Inventory - Walker / Node style (cloud-ready)"""
+"""Shop Inventory"""
 
 node Item {
     has name: str;
@@ -56,7 +56,7 @@ with entry:__main__ {
 }
 
 impl ShopBrowser.start {
-    print("\n📦 Welcome to My Electrical Shop!");
+    print("\n Welcome to My Electrical Shop!");
     if not [root --> (`?Category)] {
         print("No categories available.");
         disengage;
@@ -77,7 +77,7 @@ impl ShopBrowser.start {
 }
 
 impl ShopBrowser.search {
-    print("\n🔎 Searching for: " + self.query);
+    print("\n Searching for: " + self.query);
     let found = 0;
 
     if not [root --> (`?Category)] {
